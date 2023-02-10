@@ -15,7 +15,8 @@
 
 {% block body %}
 <div class="container">
-    <div class="wrapper fixed-wrapper">
+    <!-- add fixed-wrapper to have it stay on screen -->
+    <div class="wrapper">
         <section id="terminal">
             <div id="terminal-container">
                 <div class="terminal">
@@ -40,38 +41,18 @@
     </div>
     <div class="wrapper scroll-wrapper">
         <div class="top-text">
-            <p class="text-title desktop-view">{{ common.first_name }}</p>
-            <p class="text-title desktop-view">{{ common.last_name }}</p>
+            <h1 class="desktop-view">Hi, my name is</h1>
+            <p class="text-title desktop-view">{{ common.first_name }} {{ common.last_name }}</p>
             <p class="text-title mobile-view">{{ common.first_name }} {{ common.last_name }}</p>
+            <h2>I'm an aspiring software engineering passionate about building technology.</h2>
             <div class="social-icons">
-                <a target="_blank" href="https://github.com">
+                <a target="_blank" href="https://github.com/rachelxiao907">
                     <img class="title-logo" src="static/images/github.svg">
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/">
+                <a target="_blank" href="https://www.linkedin.com/in/rachelxiao04/">
                     <img class="title-logo" src="static/images/linkedin-logo.svg">
                 </a>
-                <a target="_blank" href="https://twitter.com">
-                    <img class="title-logo" src="static/images/twitter.svg">
-                </a>
-                <a target="_blank" href="https://www.instagram.com/">
-                    <img class="title-logo" src="static/images/insta.svg">
-                </a>
             </div>
-        </div>
-        <div class="middle-text">
-            <p class="text-content">"Spider-Man" is the alias of a student named Peter Parker who, after
-                being bitten by a genetically-altered spider, gains superhuman strength and the spider-like ability to
-                cling to any surface. He vows to use his abilities to fight crime, coming to understand the words of
-                his beloved Uncle Ben: "With great power comes great responsibility.
-            </p>
-
-            <p class="text-content">Let's get in touch!</p>
-
-            <p class="text-content">Peter Parker</p>
-
-            <p class="text-content"><a href="timeline">For more about me, my timeline, read on here.</a></p>
-
-            <br>
         </div>
     </div>
 </div>

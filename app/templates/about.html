@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/about.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <!-- add fixed-wrapper to have it stay on screen -->
+    <center class="wrapper">
+        <img id="profile" src="static/images/profile.jpg">
+    </center>
+    <div class="wrapper scroll-wrapper">
+        <div class="top-text">
+            <p class="desktop-view">Hi there!</p>
+            <h2>I'm Rachel, a freshman at UC Berkeley majoring in Electrical Engineering and Computer Sciences. </h2>
+        </div>
+        <p class="text-content">
+            I'm primarily interested in the software engineering field, and am currently looking for intern roles in that area. 
+            I enjoy working with other people to create projects that create impact.
+            <br><br>
+            Currently, I'm a Site Reliability Engineering Fellow at Major League Hacking where I learn about DevOps by creating different projects.
+            Feel free to reach out to me!
+        </p>
+
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
