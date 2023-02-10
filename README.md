@@ -1,13 +1,6 @@
-# Screenshots
-<p float="middle">
-  <img src="https://raw.githubusercontent.com/crearo/portfolio/master/screenshots/home.png" width="400">
-</p>
-
 # Technology
 
 Developed using Python Flask, and a lot of CSS and Jinja2.
-
-Sidenote: Why isn't web UI as easy to make as Android's?
 
 # I want to use this!
 

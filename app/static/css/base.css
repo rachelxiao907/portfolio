@@ -1,19 +1,24 @@
 body {
   height:100vh;
   font-family: 'Open Sans', sans-serif;
+  background-color: #e5ecff !important;
 }
 
 .navbar-ref {
-  color: #808080;
+  color: #3b4e76;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
 .navbar-ul {
-    background-color: white;
+    background-color: #e5ecff;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+
+.navbar-ul a:hover {
+  color: #3b4e76;
 }
 
 .list-inline {

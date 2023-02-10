@@ -4,14 +4,14 @@ body {
   }
   
 .top-text{
-    min-height: calc(75vh - 75px);
+    min-height: calc(65vh - 75px);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
   
 .middle-text{
-    margin-top: 25px;
+    margin-top: 0px;
 }
 
 .container {
@@ -39,8 +39,12 @@ body {
 }
 
 .top-text p {
-    font-size: 80px;
+    font-size: 70px;
     font-family: 'Roboto', sans-serif;
+}
+
+.top-text h2 {
+    font-size: 30px;
 }
 
 .fixed-wrapper {
