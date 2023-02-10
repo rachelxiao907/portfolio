@@ -2,12 +2,10 @@ $(function() {
   /* NOTE: hard-refresh the browser once you've updated this */
   $(".typed").typed({
     strings: [
-      "stat peterparker<br/>" +
-      "><span class='caret'>$</span> job: Friendly Neighborhood Spider-Man<br/> ^100" +
-      "><span class='caret'>$</span> skills: combat spider, villain slayer<br/> ^100" +
-      "><span class='caret'>$</span> hobbies: star-gazer, universe whisperer, mountain-biker<br/> ^300" +
-      "><span class='caret'>$</span> alias: spiderman<br/> ^300" +
-      "><span class='caret'>$</span> universe: found traces in every universe<br/> ^300"
+      "stat rachelxiao<br/>" +
+      "><span class='caret'>$</span> job: mlh fellow<br/> ^100" +
+      "><span class='caret'>$</span> education: uc berkeley<br/> ^100" +
+      "><span class='caret'>$</span> skills: software development, python, java<br/> ^100"
     ],
     showCursor: true,
     cursorChar: '_',
