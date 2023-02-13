@@ -55,27 +55,19 @@
         </div>
         {% endif %}
     </div>
-
     <div class="wrapper scroll-wrapper">
         <div class="heading">
+            <br><br>
             <div class="title">{{ project['name'] }}</div>
 
             <div class="date">{{ project['date'] }}</div>
 
-            <div class="md-chips">
-                {% for tag in project['tags'] %}
-                <div class="md-chip md-chip-clickable"><a class="md-chip-link" href="/projects?tags={{tag}}">{{tag}}</a>
-                </div>
-                {% endfor %}
-            </div>
-
             <div class="links">
                 {% if 'github' in project %}
-                <div><a class="github" href={{project['github']}}>Find on Github</a></div>
-                {% elif 'arxiv' in project %}
-                <div><a class="github" href={{project['arxiv']}}>View on Arxiv</a></div>
-                {% elif 'playstore' in project %}
-                <div><a class="github" href={{project['playstore']}}>View on Google Play</a></div>
+                <div><a class="github" target="_blank" href={{project['github']}}>Github</a></div>
+                {% endif %}
+                {% if 'devpost' in project %}
+                <div><a class="github" target="_blank" href={{project['devpost']}}>Devpost</a></div>
                 {% endif %}
             </div>
         </div>

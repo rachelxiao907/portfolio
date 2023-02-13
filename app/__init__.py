@@ -28,18 +28,12 @@ def projects():
     data = get_static_json("static/projects/projects.json")['projects']
     data.sort(key=order_projects_by_weight, reverse=True)
 
-    tag = request.args.get('tags')
-    if tag is not None:
-        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
-
-    return render_template('projects.html', common=common, projects=data, tag=tag)
+    return render_template('projects.html', common=common, projects=data)
 
 
 @app.route('/experiences')
 def experiences():
-    experiences = get_static_json("static/experiences/experiences.json")['experiences']
-    experiences.sort(key=order_projects_by_weight, reverse=True)
-    return render_template('projects.html', common=common, projects=experiences, tag=None)
+    return render_template('experiences.html', common=common)
 
 
 def order_projects_by_weight(projects):

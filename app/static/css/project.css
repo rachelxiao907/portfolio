@@ -63,6 +63,10 @@ span {
   color: #555;
 }
 
+.content {
+  font-size: 15px;
+}
+
 @media only screen and (max-width: 1094px) {
   .fixed-wrapper {
     position: static;

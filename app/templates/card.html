@@ -8,15 +8,6 @@
             {% endif %}
         </div>
         <div class="card-content activator">
-            <div class="container-outer">
-                <div class="md-chips container-inner">
-                    {% for tag in project['tags'] %}
-                    <div class="md-chip md-chip-clickable"><a class="md-chip-link"
-                                                              href="/projects?tags={{tag}}">{{tag}}</a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
             <div>
             <span id="title" class="card-title activator grey-text text-darken-4" title="{{project['name']}}">
               {{project['name']}}
@@ -26,13 +17,7 @@
             <div>
                 <span><a href="/projects/{{project['link']}}">Read More</a></span>
                 {% if 'github' in project %}
-                <span><a class="github" href={{project['github']}}> | Github</a></span>
-                {% endif %}
-                {% if 'arxiv' in project %}
-                <span><a class="github" href={{project['arxiv']}}> | Arxiv</a></span>
-                {% endif %}
-                {% if 'playstore' in project %}
-                <!--<span><a class="github" href={{project['playstore']}}> | Play Store</a></span>-->
+                <span><a class="github" target="_blank" href={{project['github']}}> | Github</a></span>
                 {% endif %}
             </div>
         </div>
