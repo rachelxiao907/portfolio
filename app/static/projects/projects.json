@@ -1,58 +1,114 @@
 {
   "projects": [
     {
-      "name": "Project 1",
-      "link": "project-1",
-      "date": "01/02/2003",
-      "short": "A short description of the project ...",
-      "status": "complete",
-      "weight": 1,
-      "tags": [
-        "tech"
-      ],
+      "name": "Scheme Interpreter",
+      "link": "scheme",
+      "date": "November 2022",
+      "short": "An interpreter for a subset of the Scheme language.",
+      "weight": 9,
       "photos": [
-        "/static/projects/project-1/img.jpg"
+        "/static/projects/scheme/img.jpg"
       ]
     },
     {
-      "name": "Project 2",
-      "link": "project-2",
-      "date": "04/05/2006",
-      "short": "A short description of the project ...",
-      "weight": 1,
-      "tags": [
-        "media"
-      ],
+      "name": "Ants Vs. SomeBees",
+      "link": "ants",
+      "date": "October 2022",
+      "short": "A tower defense game inspired by PopCap Games' Plants Vs. Zombies.",
+      "weight": 8,
       "photos": [
-        "/static/projects/project-2/img.jpg"
+        "/static/projects/ants/img.jpg"
       ]
     },
     {
-      "name": "Project 1",
-      "link": "project-1",
-      "date": "01/02/2003",
-      "short": "A short description of the project ...",
-      "status": "complete",
+      "name": "Cats",
+      "link": "cats",
+      "date": "September 2022",
+      "short": "A program that measures typing speed and also implements typing autocorrect. This project is inspired by typeracer.",
+      "weight": 5,
+      "photos": [
+        "/static/projects/cats/img.jpg"
+      ]
+    },
+    {
+      "name": "Journalify",
+      "link": "journalify",
+      "date": "October 2022",
+      "short": "Created at Cal Hacks 9.0 Hackathon, a tool for you to soundtrack your day based on your journal log.",
+      "weight": 6,
+      "photos": [
+        "/static/projects/journalify/home.jpg",
+        "/static/projects/journalify/start.jpg",
+        "/static/projects/journalify/entry.jpg",
+        "/static/projects/journalify/result.jpg",
+        "/static/projects/journalify/model.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/Journalify",
+      "devpost": "https://devpost.com/software/journalify"
+    },
+    {
+      "name": "Personal Library",
+      "link": "personal-library",
+      "date": "December 2021",
+      "short": "An online library containing a personalized selection list of books and movies each user creates by searching about any book or movie.",
+      "weight": 7,
+      "photos": [
+        "/static/projects/personal-library/home.jpg",
+        "/static/projects/personal-library/img.jpg",
+        "/static/projects/personal-library/search.jpg",
+        "/static/projects/personal-library/results.jpg",
+        "/static/projects/personal-library/movie.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/congenial-broccolis"
+    },
+    {
+      "name": "Space Invaders",
+      "link": "space-invaders",
+      "date": "May 2021",
+      "short": "A version of the game Space Invaders in Processing.",
+      "weight": 4,
+      "photos": [
+        "/static/projects/space-invaders/home.jpg",
+        "/static/projects/space-invaders/features.jpg",
+        "/static/projects/space-invaders/img.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/APCSFinalProject"
+    },
+    {
+      "name": "Four Toppings",
+      "link": "four-toppings",
+      "date": "March 2022",
+      "short": "A virtual boba tea shop game where users experience running their own boba shop by taking orders, selling boba, manging inventory, and more.",
+      "weight": 3,
+      "photos": [
+        "/static/projects/four-toppings/home.jpg",
+        "/static/projects/four-toppings/counter.jpg",
+        "/static/projects/four-toppings/img.jpg",
+        "/static/projects/four-toppings/shop.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/Four-Toppings"
+    },
+    {
+      "name": "Guess Who",
+      "link": "guess-who",
+      "date": "June 2022",
+      "short": "A web application that allows two players to compete in a game of Guess Who.",
       "weight": 2,
-      "tags": [
-        "tech"
-      ],
       "photos": [
-        "/static/projects/project-1/img.jpg"
-      ]
+        "/static/projects/guess-who/img.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/MISTR"
     },
     {
-      "name": "Project 2",
-      "link": "project-2",
-      "date": "04/05/2006",
-      "short": "A short description of the project ...",
+      "name": "StoryForge",
+      "link": "storyforge",
+      "date": "November 2021",
+      "short": "A collaborative storytelling and blog web application.",
       "weight": 1,
-      "tags": [
-        "media"
-      ],
       "photos": [
-        "/static/projects/project-2/img.jpg"
-      ]
+        "/static/projects/storyforge/img.jpg"
+      ],
+      "github": "https://github.com/rachelxiao907/redacted"
     }
   ]
 }
