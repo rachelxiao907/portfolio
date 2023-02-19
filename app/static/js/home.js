@@ -2,7 +2,7 @@ $(function() {
   /* NOTE: hard-refresh the browser once you've updated this */
   $(".typed").typed({
     strings: [
-      "stat rachelxiao<br/>" +
+      "stats rachelxiao<br/>" +
       "><span class='caret'>$</span> job: mlh fellow<br/> ^100" +
       "><span class='caret'>$</span> education: uc berkeley<br/> ^100" +
       "><span class='caret'>$</span> skills: software development, python, java<br/> ^100"
