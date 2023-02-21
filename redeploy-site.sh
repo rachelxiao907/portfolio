@@ -12,8 +12,8 @@ pip install -r requirements.txt
 
 # Start new detached tmux session
 tmux new-session -d -s flask_server
-tmux send-keys "cd portfolio && source /env/bin/activate 
-&& flask run --host=0.0.0.0" C-m
+tmux send-keys "cd portfolio" C-m
+tmux send-keys "source env/bin/activate" C-m
+tmux send-keys "flask run --host=0.0.0.0" C-m
 
 echo "Flask server started"
-
