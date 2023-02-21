@@ -10,7 +10,7 @@ cd portfolio
 git fetch && git reset origin/main --hard
 
 # Activate virtual environment and install dependencies
-source /env/bin/activate
+source env/bin/activate
 pip install -r requirements.txt
 
 # Start new detached tmux session
