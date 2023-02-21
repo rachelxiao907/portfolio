@@ -3,9 +3,6 @@
 # Kill existing tmux sessions
 tmux kill-session -a
 
-# Change to project directory
-cd portfolio
-
 # Update to latest git version
 git fetch && git reset origin/main --hard
 
