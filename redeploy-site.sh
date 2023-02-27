@@ -7,8 +7,8 @@ cd portfolio
 git fetch && git reset origin/main --hard
 
 # Activate virtual environment and install dependencies
-source portfolio/env/bin/activate
-pip install -r portfolio/requirements.txt
+source env/bin/activate
+pip install -r requirements.txt
 
 # Restart myportfolio service
 systemctl restart myportfolio
