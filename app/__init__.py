@@ -1,6 +1,7 @@
 import io
 import json
 import os
+from dotenv import load_dotenv
 
 from flask import Flask, render_template, request
 from peewee import *
@@ -9,6 +10,7 @@ from playhouse.shortcuts import model_to_dict
 
 app = Flask(__name__)
 
+load_dotenv()
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
         user=os.getenv("MYSQL_USER"),
         password=os.getenv("MYSQL_PASSWORD"),
@@ -78,6 +80,38 @@ def project(title):
         selected['description'] = io.open(get_static_file(
             'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
     return render_template('project.html', common=common, project=selected)
+
+
+# peewee model that reflects fields of a timeline post
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        database = mydb
+mydb.connect()
+mydb.create_tables([TimelinePost])
+
+@app.route('/api/timeline_post', methods=['POST'])
+def post_timeline_post():
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+
+    return model_to_dict(timeline_post)
+
+# GET endpoint that retrieves all timeline posts ordered by created_at descending so the newest timeline posts are returned at the top.
+@app.route('/api/timeline_post', methods=['GET'])
+def get_timeline_post():
+    return {
+        'timeline_posts': [
+            model_to_dict(p)
+            for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())
+        ]
+    }
 
 
 @app.errorhandler(404)
