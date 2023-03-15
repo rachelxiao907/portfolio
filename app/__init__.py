@@ -114,9 +114,9 @@ def get_timeline_post():
     }
 
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html', common=common), 404
+# @app.errorhandler(404)
+# def page_not_found(e):
+#     return render_template('404.html', common=common), 404
 
 
 def get_static_file(path):
