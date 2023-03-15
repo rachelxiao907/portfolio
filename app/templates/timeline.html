@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename 
+= 'css/timeline.css') }}">
+<link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script 
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<form method="POST" action="/api/timeline_post">
+    <label>Username</label><input name="name" type="text">
+    <br>
+    <label>Email</label><input name="email" type="text">
+    <br>
+    <label>Content</label><input name="content" type="text">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
