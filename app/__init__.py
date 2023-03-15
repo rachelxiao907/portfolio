@@ -114,6 +114,11 @@ def get_timeline_post():
     }
 
 
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title="Timeline", common=common)
+
+
 # @app.errorhandler(404)
 # def page_not_found(e):
 #     return render_template('404.html', common=common), 404
