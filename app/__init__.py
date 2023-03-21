@@ -1,9 +1,10 @@
 import io
 import json
 import os
+import re
 from dotenv import load_dotenv
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict 
@@ -11,12 +12,18 @@ from playhouse.shortcuts import model_to_dict
 app = Flask(__name__)
 
 load_dotenv()
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+else:
+    mydb = MySQLDatabase(
+        os.getenv("MYSQL_DATABASE"),
         user=os.getenv("MYSQL_USER"),
         password=os.getenv("MYSQL_PASSWORD"),
         host=os.getenv("MYSQL_HOST"),
         port=3306
-)
+    )
+
 print(mydb)
 
 common = {
@@ -95,13 +102,24 @@ mydb.connect()
 mydb.create_tables([TimelinePost])
 
 @app.route('/api/timeline_post', methods=['POST'])
-def post_timeline_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
+def post_time_line_post():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    content = request.form.get('content')
+
+    if not content:
+        abort(400, 'Invalid content')
+    elif not name:
+        abort(400, 'Name is required')
+    elif not re.match(r'^[a-zA-Z\s]+$', name):
+        abort(400, 'Invalid name')
+    elif not re.match(r'^\S+@\S+\.\S+$', email):
+        abort(400, 'Invalid email')
+
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
+
 
 # GET endpoint that retrieves all timeline posts ordered by created_at descending so the newest timeline posts are returned at the top.
 @app.route('/api/timeline_post', methods=['GET'])
