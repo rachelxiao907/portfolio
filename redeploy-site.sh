@@ -3,6 +3,9 @@
 # Change to project directory
 cd portfolio
 
+# Activate virtual environment
+source env/bin/activate
+
 # Update to latest git version
 git fetch && git reset origin/main --hard
 
