@@ -6,9 +6,8 @@ cd portfolio
 # Update to latest git version
 git fetch && git reset origin/main --hard
 
-# Activate virtual environment and install dependencies
-source env/bin/activate
-pip install -r requirements.txt
+# Spin containers down to prevent out of memory issues on our VPS 
+instances
+docker compose -f docker-compose.prod.yml down
 
-# Restart myportfolio service
-systemctl restart myportfolio
+docker compose -f docker-compose.prod.yml up -d --build
