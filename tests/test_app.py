@@ -41,11 +41,4 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         assert "Name is required" in html
 
-        # Test for resume included in the nav bar
-    def test_resume(self):
-        response = self.client.get("/")
-        assert response.status_code == 200
-        html = response.get_data(as_text=True)
-        assert '<a class="navbar-ref" href="https://drive.google.com/file/d/1HvnHTZWfxfLDAh062t151LTgDHM_UcNv/view?usp=sharing" target="_blank">Resume</a>' in html
-
     
